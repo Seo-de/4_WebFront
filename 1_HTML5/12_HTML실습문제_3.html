@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_HTML실습문제_3</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <fieldset>
+        <legend>필수 입력 사항</legend>
+
+        <table>
+            <tr>
+                <th><label for="id">ID </label></th>
+                <td><input type="text" id="id" placeholder="아이디 10글자 이내"> <button>중복확인</button></td>
+            </tr>
+            <tr>
+                <th><label for="pw">비밀번호</label></th>
+                <td><input type="text" size="30" id="pw" placeholder="영문,숫자,특수문자 포함 8자 이상"></td>
+            </tr>
+            <tr>
+                <th> <label for="pw2">비밀번호 확인</label></th>
+                <td><input size="30" id="pw2" type="text"></td>
+            </tr>
+            <tr>
+                <th> <label for="email">Email</label></th>
+                <td><input type="text" id="email">
+            <select>
+                <option value="">직접입력</option>
+                <option value="">naver.com</option>
+                <option value="">daum.net</option>
+                <option value="">gmail.com</option>
+            </select></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>
+        프로필 사진 <input type="file"><br><br>
+        성별 : 
+         <input type="radio" name="gender"> <label for="gender">남자</label>
+         <input type="radio" name="gender"> <label for="gender">여자</label> <br><br>
+        생년월일 : <input type="date"><br><br>
+        취미 <br> <input type="checkbox" name="hobby"> <label for="hobby">야구</label>
+        <input type="checkbox" name="hobby"> <label for="hobby">농구</label>
+        <input type="checkbox" name="hobby"> <label for="hobby">축구</label> <br>
+        <input type="checkbox" name="hobby"> <label for="hobby">공부</label>
+        <input type="checkbox" name="hobby"> <label for="hobby">음악감상</label> <br>
+        <input type="checkbox" name="hobby"> <label for="hobby">기타 <input type="text"></label><br><br>
+        자기소개 <br> <textarea name="" id="" cols="70" rows="10"></textarea>
+    </fieldset><br>
+    <button>회원가입</button> <button>다시입력</button> <button>이전으로</button>
+</body>
+</html>
