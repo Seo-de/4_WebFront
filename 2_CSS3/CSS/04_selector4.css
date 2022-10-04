@@ -29,8 +29,7 @@
 
 #test1>p:nth-child(4){
     /* #test1의 자식 요소 중 4번째 자식이 p태그가 맞을 경우 선택 */
-    background-color: pink;
-}
+    background-color: pink;}
 
 #test1>*:nth-child(6){
      /* #test1의 자식 요소 중 6번째 자식 선택 */
@@ -44,7 +43,7 @@
     /* #test1의 자식 요소 중 2n번째(짝수) 자식이 p태그가 맞을 경우 선택 */}
 
 #test1>p:nth-last-child(2){
-    /*  #test1의 자식 요소 중 뒤에서 듀 번째 자식이 p태그가 맞을 경우 선택 */
+    /*  #test1의 자식 요소 중 뒤에서 두 번째 자식이 p태그가 맞을 경우 선택 */
     color: gold;
     font-weight : bold;
 }
