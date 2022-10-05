@@ -1,0 +1,95 @@
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block{ 
+    border: 1px solid black; /* 1px 실선 검정색 테두리 */ 
+    width : 150px;
+    height: 150px;
+    color: white;
+    display: block; /* 요소의 형식을 block으로 변경 */}
+
+
+.inline{
+    display: inline; /* 요소의 형식을 inline으로 변경 */
+}
+
+
+.inline-block{
+    display: inline-block; /* 요소의 형식을 inline-block으로 변경 */
+}
+
+
+/* 상하 2분할 */
+#container-1{
+    border: 3px solid black; width: 350px; height: 472px;
+}
+
+/* 내부 영역 분할 1번 요소 */
+#container-1 > div:first-child{
+    background-color: mediumslateblue;
+    /* height: 135px; */
+    height: 30%;
+    /* % : 브라우저 또는 감싸는 영역의 크기에 비례해서 크기를 지정(자동 계산) */
+}
+
+/* 내부 영역 분할 2번 요소 */
+#container-1 > div:last-child{
+    background-color: beige;
+    /* height: 315px; */
+    /* height: 70%; */
+
+    /* CSS에서 쓸 수 있는 함수 중 clac() 함수 */
+    height: calc(472px * 0.7); /* 참고로 알아두라고 알려주심. */
+}
+
+#container-2{border: 2px solid black; height: 440px; width: 300px;}
+#container-2>div:first-child{height: 15%; background-color: bisque;}
+#container-2>div:nth-child(2){height: 35%; background-color: skyblue;}
+#container-2>div:last-child{height: 50%; background-color: blue;}
+
+
+
+/* 좌우 2분할(50:50) */
+#container-3{ border: 5px solid red;
+    width: 400px; height: 200px; }
+
+#container-3>div{ 
+    width: 50%; height: 100%; 
+    display: inline-block;}
+/* 같은 비율이라서 한번에 같이 작성해줘도 된데. */
+
+
+
+/* display : none; / visibility : hidden */
+.test4{
+    border: 1px solid black;
+    width: 50px; height: 50px;
+}
+
+.none{
+    /* 요소는 존재하나 화면에 출력되지 않음 */
+    display: none;
+    /* 2가 사라져있음. / checkbox에서도 썼었데 아마 모양 바꾸는 거일듯*/
+}
+
+.hidden{
+    /* 화면에 투명한 형태로 출력 */
+    visibility : hidden;
+    /* 4가 투명하게 보임 */
+}
+
+
+
+
+/* 원형으로 좌우 2분할 만들어보기 */
+#container-4{ border: 5px solid red;
+    width: 200px; height: 200px; 
+    border-radius: 50%; /* 테두리 길이의 50% 지점부터 둥글게 처리 */
+    overflow: hidden; /* 내부 내용이 넘칠 경우 넘치는 부분을 숨김 */}
+
+#container-4>div{ 
+    width: 50%; height: 100%; 
+    display: inline-block;}
