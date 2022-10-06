@@ -1,0 +1,84 @@
+/* 웹 폰트 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
+/* font-size */
+#size-test{
+    font-size: 40px;
+}
+
+#size-test>li:nth-child(1){font-size: 10px;}
+#size-test>li:nth-child(2){font-size: 7pt;}
+#size-test>li:nth-child(3){font-size: 50%;}
+#size-test>li:nth-child(4){font-size: 0.5em;}
+
+
+/* font-weight */
+#weight-test{
+    font-size: 24px;
+    /* font-weight: bold; */
+    font-weight: lighter;
+}
+
+#weight-test>li:first-child {
+    font-weight: lighter;
+    /* 부모보다 얇게, 부모가 bold인 경우 normal로 표시*/
+} 
+#weight-test>li:nth-child(2) {font-weight: bold;}
+#weight-test>li:nth-child(3) {font-weight: bolder;
+    /* 부모보다 두껍게, 부모가 얇은 경우 normal로 표시, 두꺼운걸 더 두껍게는 안된데*/
+}
+#weight-test>li:nth-child(4){font-weight: 900;}
+#weight-test>li:nth-child(5){
+    /* font-style : 글꼴의 모양을 지정하는 속성 */
+    /* italic : 폰트에서 제공하는 비스듬한(기울어진) 글자 */
+    /* oblique : 강제로 글자를 비스듬하게 변경 - 글자 깨짐 현상이 일어날 수 있음 */
+    /* font-style: italic; */
+    font-style: oblique;
+}
+
+
+
+/* font-family */
+#family-test1>li:nth-child(1){
+    font-family: '궁서';
+}
+#family-test1>li:nth-child(2){
+    font-family: '백동현체', '궁서체';
+    /* 우선 '백동현체'를 적용하고, 해당 폰트가 없으면 '궁서체'를 적용 */
+}
+/* 폰트명(궁서) : 글자의 크기에 따라서 폭이 변함(가변)
+   폰트명 + 체(궁서체) : 글자 크기에 상관 없이 폭이 일정함(고정)
+   영어 숫자 특수문자에는 적용이 잘되는데 한글포함 외국어들에겐 적용이 잘 안된데
+ */
+#family-test1>li:nth-child(3){
+    font-family: '백동현체';
+    /* 폰트가 없을 경우 브라우저 기본 폰트 적용 */
+}
+
+
+
+/* 웹 폰트 사용하기 */
+
+/* link 태그를 이용한 웹 폰트 적용 */
+#family-test2>li:nth-child(1){
+    font-family: 'Nanum Pen Script';
+}
+
+
+/* @import 이용한 웹 폰트 적용 */
+#family-test2>li:nth-child(2){
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+
+/* @font-face를 이용하는 방법 */
+@font-face {
+    font-family: 'HBIOS-SYS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#family-test2>li:nth-child(3){
+    font-family: 'HBIOS-SYS';
+}

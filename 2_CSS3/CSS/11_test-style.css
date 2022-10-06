@@ -1,0 +1,79 @@
+/* color 속성 */
+#color-ul>li{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+#color-ul>li:first-child{ color: red; }
+#color-ul>li:nth-child(2){
+    /* color: #f3a;
+           RGB */
+    color: #89a21f;
+            /* R G B */
+}
+
+#color-ul>li:nth-child(3){
+    /* rgb 색상을 10진수로 작성 */
+    /* 0 ~ 255 */
+    color: rgb(100,2,200);
+}
+
+#color-ul>li:nth-child(4){
+    /* a : 투명도(0~1) */
+    /* 0 ~ 255 */
+    color: rgba(100,2,200,0.59);
+}
+
+#color-ul>li:nth-child(5){
+    /* hsl : 색조, 채도, 밝기 */
+    /* 색조 : 0(red), 120(green), 240(blue) */
+    /* 밝기 : 50% 기준 */
+    color: hsl(241, 50%, 70%);
+}
+
+#color-ul>li:nth-child(6){
+    /* hsla : 색조, 채도, 밝기, 투명도 */
+    color: hsla(241, 50%, 70%, 0.5);
+}
+
+
+
+/* text-decoration */
+#deco-ul>li:nth-child(1){ text-decoration: underline; }
+#deco-ul>li:nth-child(2){ text-decoration: line-through; }
+#deco-ul>li:nth-child(3){ text-decoration: overline; }
+#deco-ul>li:nth-child(4)> a { text-decoration: none; color: black;}
+
+
+
+/* text-align */
+#align-test>p:nth-child(1){text-align: left;}
+#align-test>p:nth-child(2){text-align: right;}
+#align-test>p:nth-child(3){text-align: center;}
+#align-test>p:nth-child(4){text-align: justify;} 
+/* 양쪽 정렬 - 한줄에 작성한 글자를 그 줄에 꽉차게 만드는거*/
+
+
+#align-test>p:nth-child(5)>span{
+    display: inline-block;
+    border: 1px solid black;
+    width: 100px; height: 30px;
+    background-color: cornflowerblue;
+}
+
+#align-test>p:nth-child(5){text-align: center;}
+
+
+
+/* line-height */
+#line-test>p:first-child{line-height: 10px;}
+
+#line-test>p:last-child{line-height: 30px;}
+
+
+
+
+/* letter-spacing */
+/* 음수 값을 지정해서 글자 사이의 간격을 줄일 때 많이 사용 */
+#letter-test{letter-spacing: -1px;}
