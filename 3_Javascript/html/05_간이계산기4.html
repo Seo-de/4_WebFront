@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_간이 계산기 version3</title>
+</head>
+<body>
+    <h1>간이 계산기 만들기4</h1>
+
+    첫 번째 값 : <input type="number" id="num1"><br>
+    두 번째 값 : <input type="number" id="num2"><br>
+
+    <!-- alt + shift 누르면 원하는 위치에 원하는 만큼 선택 가능 -->
+    <!-- 여기서 this -> 클릭 된 버튼 자체(이벤트가 발생한 요소) -->
+    <button onclick="cal(this)"> + </button>
+    <button onclick="cal(this)"> - </button>
+    <button onclick="cal(this)"> * </button>
+    <button onclick="cal(this)"> / </button>
+    <button onclick="cal(this)"> % </button>
+
+    <br><br>
+
+    계산 결과 : <span id="result"><!-- 연산 결과 출력 --></span>
+
+    <script src="../js/05_간이계산기4.js"></script>
+</body>
+</html>
