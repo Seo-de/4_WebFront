@@ -102,3 +102,55 @@ document.getElementById("btn2").addEventListener("click", function(){
     })
 
 })
+
+
+// innerHTML
+const btn3 = document.getElementById("btn3");
+const div3 = document.getElementById("div3");
+
+let count3 = 1;
+
+btn3.addEventListener("click", function(){
+    if(count3 <= 10){
+        const input = "<input type='text'>"
+        div3.innerHTML += "<div>"+count3+input+"</div>";
+        count3++; // 1 증가
+        // 이게 밑에 새롭게 하나씩 추가 되는게 아니라 만들때마다 다시 다 새로 만들어서 내용들이 없어진데.
+    }
+})
+
+
+
+// createElement - innerHTML문제점 해결해준데
+const btn4 = document.getElementById("btn4");
+const div4 = document.getElementById("div4");
+
+let count4 = 1;
+
+btn4.addEventListener("click", function(){
+
+    if(count4 <= 10){
+
+        // document.createElement("태그명") 함수 호출 
+        // -> 해당 태그 요소를 생성하여 반환
+        // -> 요소가 생성될 뿐이지 화면에 추가되는것이 아니다!
+
+        const div = document.createElement("div");
+        const input = document.createElement("input");
+
+        // #div4 > div > input
+
+        // div의 내용으로 count4 추가 후 1 증가
+        div.innerText = count4;
+        count4++;
+
+        // input을 div의 마지막 자식으로 추가
+        // 요소A.append(노드 또는 요소B)
+        // -> 요소A의 마지막 자식으로 추가
+        div.append(input);
+
+        // #div4의 마지막 자식 추가
+        div4.append(div);
+
+    }
+})
